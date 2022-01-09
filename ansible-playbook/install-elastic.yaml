@@ -21,9 +21,4 @@
     - name: enable elasticsearch.service
       service: 
         name: elasticsearch.service
-        enabled: yes 
-     
-    - name: start elasticsearch.service
-      service:
-        name: elasticsearch.service
-        state: started        
+        enabled: yes        
