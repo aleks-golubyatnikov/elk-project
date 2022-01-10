@@ -8,3 +8,7 @@ TimeoutStartSec=500
 
 3. Check status
 curl {ip_address}:9200
+
+4. Commands
+curl -XGET -H "Content-Type: application/json" 192.168.0.40:9200
+curl -XPUT -H "Content-Type: application/json" 192.168.0.40:9200/blog/post/1?pretty --data-binary @data.json
