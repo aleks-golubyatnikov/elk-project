@@ -1,0 +1,1 @@
+using powershell https://wiki.merionet.ru/servernye-resheniya/59/izuchenie-rest-api-s-pomoshhyu-powershell/
