@@ -1,0 +1,2 @@
+*.exe <node> <log.file> <output.json> <index-elk>
+ia-modes-1.cdu.so Monitel_Modes_Host-2021-10-27.log data.json logs-modes

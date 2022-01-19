@@ -1,1 +1,2 @@
 logs-examples/*.log
+log-parser/log-parser/obj/Debug/*.cache
