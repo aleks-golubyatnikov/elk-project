@@ -1,0 +1,24 @@
+- hosts: elastic-cluster
+  become: yes
+  tasks:
+    - name: install the public signing key
+      shell: wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+ 
+    - name: install apt transport https
+      apt:
+        name: apt-transport-https
+        state: present
+
+    - name: add repository to source list
+      shell: echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-7.x.list 
+    
+    - name: install elasticsearch
+      apt:
+        name: elasticsearch
+        state: present
+        update_cache: true
+
+    - name: enable elasticsearch.service
+      service: 
+        name: elasticsearch.service
+        enabled: yes        
