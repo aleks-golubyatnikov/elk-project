@@ -1,1 +1,3 @@
 logs-examples/*.log
+log-parser/log-parser/bin/Debug/*.log
+elasticsearch/logs/*.log
