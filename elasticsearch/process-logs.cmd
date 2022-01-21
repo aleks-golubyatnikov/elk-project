@@ -4,7 +4,7 @@ SET ELASTICADDRESS="http://192.168.0.40:9200/"
 SET CONTENTTYPE="application/json; charset=utf-8"
 
 SET SCRIPT_PATH=.\
-SET SOURCE_PATH="C:\Projects\linux-dev\elk\elk-project\logs-examples"
+SET SOURCE_PATH="\\IA-MODES1-TST\Log"
 SET DESTINATION_PATH="C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs"
 SET PROCESSED_PATH="C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Processed"
 
