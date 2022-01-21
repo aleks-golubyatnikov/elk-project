@@ -1,0 +1,11 @@
+{
+"mappings": {
+        "properties": {
+                "node": {"type": "text"},
+                "timestamp": {"type": "date", "format": "date_hour_minute_second_millis"},
+                "module": {"type": "text"},
+                "severity": {"type": "text"},
+                "message": {"type": "text"}
+        }
+}
+}

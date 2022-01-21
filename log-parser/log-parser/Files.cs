@@ -13,14 +13,29 @@ namespace log_parser
         {
             try {
                 using (var tw = new StreamWriter(_path, true)) {
-                    tw.WriteLine(_data.ToString());
+                    tw.WriteLine(_data);
                     tw.Close();
                 }
             }
             catch (Exception) {
                 throw;
             }
-         }
+        }
+
+        public void WriteTextLog(string _line)
+        {
+            try {
+                string _path = DateTime.Now.ToString("yyyy-MM-dd") + "-logs-process.txt";
+                
+                using (var tw = new StreamWriter(_path, true)) {
+                    tw.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")+" " +_line);
+                    tw.Close();
+                }
+            }
+            catch (Exception) {
+                throw;
+            }
+        }
 
         public void SaveListToFile(List<String> _data, string _path)
         {
@@ -34,32 +49,26 @@ namespace log_parser
 
         public void SaveLineFile(String _line, string _path)
         {
-            try
-            {
-                using (StreamWriter sw = File.AppendText(_path))
-                {
+            try {
+                using (StreamWriter sw = File.AppendText(_path)) {
                     sw.WriteLine(_line);
                 }
             }
-            catch (Exception)
-            {
+            catch (Exception) {
                 throw;
             }
         }
 
         public double GetFileSize(string _path)
         {
-            try
-            {
+            try {
                 double len = new FileInfo(_path).Length;
                 return len;
             }
-            catch (Exception)
-            {
+            catch (Exception) {
                 throw;
             }
         }
-
 
     }
 }

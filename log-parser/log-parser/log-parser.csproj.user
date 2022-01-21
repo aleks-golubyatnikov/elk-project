@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>golubyatnikov-2 "C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Monitel_Modes_Host-2022-01-19.log" "C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Processed\\" data logs-modes 10</StartArguments>
+    <StartArguments>golubyatnikov-2 "C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Monitel_Modes_DataMonitor-2022-01-20.log" "C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Processed\\" data logs-modes 10 1000</StartArguments>
   </PropertyGroup>
 </Project>

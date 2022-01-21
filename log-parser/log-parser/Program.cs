@@ -12,8 +12,17 @@ namespace log_parser
     {
         static void Main(string[] args)
         {
-            if (args.Length <6)
+            var ifile = new Files();
+            
+            foreach (string arg in args) {
+                Console.WriteLine("# " + arg);
+                ifile.WriteTextLog("# " + arg);
+            }
+
+            if (args.Length <7)
             {
+                ifile.WriteTextLog("Invalid args\r\n");
+                
                 Console.WriteLine("Invalid args\r\n");
                 Console.WriteLine("Press <Enter> to close...");
                 Console.ReadLine();
@@ -24,6 +33,8 @@ namespace log_parser
                 try {
                     if (!File.Exists(args[1])) {
 
+                        ifile.WriteTextLog("File '" + args[1] + "' does not exists\r\n");
+
                         Console.WriteLine("File '"+ args[1] + "' does not exists\r\n");
                         Console.WriteLine("Press <Enter> to close...");
                         Console.ReadLine();
@@ -33,7 +44,6 @@ namespace log_parser
                     else {
                         List<string> data = new List<string>();
                         List<string> _data = new List<string>();
-
 
                         using (FileStream fs = File.Open(args[1], FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                         using (BufferedStream bs = new BufferedStream(fs))
@@ -62,7 +72,7 @@ namespace log_parser
                                 }
                                 else {
                                     log.message += line+" ";
-                                    json_line = "{\"index\": {\"_index\":\"" + args[3] + "\"}}\r\n";
+                                    json_line = "{\"index\": {\"_index\":\"" + args[4] + "\"}}\r\n";
                                     json_line += "{\"timestamp\": \"" + log.timestamp + "\",\"node\": \"" + log.node + "\", \"severity\": \"" + log.severity + "\", \"module\": \"\", \"message\": \"" + log.message + "\"}";
 
                                     data[data.Count-1] = json_line;
@@ -79,12 +89,13 @@ namespace log_parser
                             3: data
                             4: logs-modes
                             5: 50
+                            6: 1000
                         */
 
                         int i = 0;
 
                         int skip = 0;
-                        int step = 1000;
+                        int step = Convert.ToInt16(args[6]);
 
                         int w = data.Count % step;
                         bool process = true;
@@ -100,7 +111,6 @@ namespace log_parser
                                 }
                                 
                                 skip += step;
-
                             }
                             else {
                                 _data = data.GetRange(skip, w);
@@ -109,11 +119,14 @@ namespace log_parser
                             }
 
                         }
-                        
+                        ifile.WriteTextLog("["+(i+1).ToString()+"] file's been created in '"+ args[2] + "'");
+
                     }
                 }
                 catch (Exception e)
                 {
+                    ifile.WriteTextLog(e.Message.ToString());
+
                     Console.WriteLine("{0} Exception: ", e);
                     Console.WriteLine("Press <Enter> to close...");
                     Console.ReadLine();

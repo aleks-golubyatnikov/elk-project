@@ -1,0 +1,47 @@
+2022-01-21 13:48:39 # golubyatnikov-2
+2022-01-21 13:48:39 # C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Monitel_Modes_Host-2022-01-19.log
+2022-01-21 13:48:39 # C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Processed\
+2022-01-21 13:48:39 # data
+2022-01-21 13:48:39 # logs-modes
+2022-01-21 13:48:39 # 10
+2022-01-21 13:48:39 # 1000
+2022-01-21 13:48:39 File 'C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Monitel_Modes_Host-2022-01-19.log' does not exists
+
+2022-01-21 13:49:24 # golubyatnikov-2
+2022-01-21 13:49:24 # C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Monitel_Modes_Host-2022-01-19.log
+2022-01-21 13:49:24 # C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Processed\
+2022-01-21 13:49:24 # data
+2022-01-21 13:49:24 # logs-modes
+2022-01-21 13:49:24 # 10
+2022-01-21 13:49:24 # 1000
+2022-01-21 13:49:26 Выдано исключение типа "System.OutOfMemoryException".
+2022-01-21 13:50:24 # golubyatnikov-2
+2022-01-21 13:50:24 # C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Monitel_Modes_Host-2022-01-19.log
+2022-01-21 13:50:24 # C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Processed\
+2022-01-21 13:50:24 # data
+2022-01-21 13:50:24 # logs-modes
+2022-01-21 13:50:24 # 10
+2022-01-21 13:50:24 # 1000
+2022-01-21 13:50:30 Выдано исключение типа "System.OutOfMemoryException".
+2022-01-21 19:54:16 # golubyatnikov-2
+2022-01-21 19:54:16 # C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Monitel_Modes_DataMonitor-2022-01-20.log
+2022-01-21 19:54:16 # C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Processed\
+2022-01-21 19:54:16 # data
+2022-01-21 19:54:16 # logs-modes
+2022-01-21 19:54:16 # 10
+2022-01-21 19:54:16 # 1000
+2022-01-21 19:54:16 [1] file's been created in 'C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Processed\'
+2022-01-21 19:55:22 # golubyatnikov-2
+2022-01-21 19:55:22 # C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Monitel_Modes_DataMonitor-2022-01-20.log
+2022-01-21 19:55:22 # C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Processed\
+2022-01-21 19:55:22 # data
+2022-01-21 19:55:22 # logs-modes
+2022-01-21 19:55:22 # 10
+2022-01-21 19:55:22 # 1000
+2022-01-21 19:57:11 # golubyatnikov-2
+2022-01-21 19:57:11 # C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Monitel_Modes_DataMonitor-2022-01-20.log
+2022-01-21 19:57:11 # C:\Projects\linux-dev\elk\elk-project\elasticsearch\logs\Processed\
+2022-01-21 19:57:11 # data
+2022-01-21 19:57:11 # logs-modes
+2022-01-21 19:57:11 # 10
+2022-01-21 19:57:11 # 1000
