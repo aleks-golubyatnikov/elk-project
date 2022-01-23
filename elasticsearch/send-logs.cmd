@@ -15,6 +15,6 @@ For /R %ROOT_PATH% %%G IN (*.info) do (
 )
 
 For /R %PROCESSED_PATH% %%G IN (*.json) do (
-    curl -XPOST -H "Content-Type: %CONTENTTYPE%" "%ELASTICADDRESS%/%INDEX%/_bulk?pretty" --data-binary @"%%G" >> "%DTIME%_%%~nG_json-upload.info"
+    curl -XPOST -H "Content-Type: %CONTENTTYPE%" "%ELASTICADDRESS%/%INDEX%/_bulk?pretty" --data-binary @"%%G" >> "%DTIME%_%%~nG_json-upload.info" 2>&1
     del /s /q /f %%G
 )

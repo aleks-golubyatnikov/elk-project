@@ -2,6 +2,7 @@ logs-examples/*.log
 logs-examples/*.7z
 log-parser/log-parser/bin/Debug/*.log
 elasticsearch/logs/*.log
+elasticsearch/*.txt
 elasticsearch/*.zip
 elasticsearch/*.info
 elasticsearch/logs/Processed/*.json

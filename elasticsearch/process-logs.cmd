@@ -19,7 +19,6 @@ SET ROWSCOUNT="1000"
 powershell.exe %SCRIPT_PATH%\copy-logs.ps1 -SourcePath '%SOURCE_PATH%' -DestinationPath '%DESTINATION_PATH%' -Mask '%MASK%'
 powershell.exe %SCRIPT_PATH%\process-logs.ps1 -Path '%DESTINATION_PATH%' -ProcessedPath '%PROCESSED_PATH%' -Mask '%MASK%' -ParserPath '%PARSER_PATH%' -Index '%INDEX%' -FileSize '%FILESIZE%' -RowsCount '%ROWSCOUNT%'
 call %SCRIPT_PATH%send-logs.cmd
-
 SET ROOT_PATH="C:\Projects\linux-dev\elk\elk-project\elasticsearch\\"
 SET INFO_MASK="*.info"
 
