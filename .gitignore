@@ -6,4 +6,6 @@ elasticsearch/*.txt
 elasticsearch/*.zip
 elasticsearch/*.info
 elasticsearch/logs/Processed/*.json
+logstash/out/log
+logstash/out/*.log
 
