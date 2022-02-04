@@ -1,20 +1,20 @@
 {
 "mappings": {
         "properties": {
-                "region": {"type": "text"},
-                "country": {"type": "text"},
-                "item_type": {"type": "text"},
-                "sales_chanel": {"type": "text"},
-                "order_priority": {"type": "text"},
-                "order_date": {"type": "date", "format": "M/d/yyyy"},
-                "order_id": {"type": "long"},
-                "ship_date": {"type": "date", "format": "M/d/yyyy"},
-                "units_sold": {"type": "integer"},
-                "unit_price": {"type": "float"},
-                "unit_cost": {"type": "float"},
-                "total_revenue": {"type": "float"},
-                "total_cost": {"type": "float"},
-                "total_profit": {"type": "float"}
+                "Region": {"type": "text"},
+                "Country": {"type": "text"},
+                "Item Type": {"type": "text"},
+                "Sales Channel": {"type": "text"},
+                "Order Priority": {"type": "text"},
+                "Order Date": {"type": "date", "format": "M/d/yyyy"},
+                "Order ID": {"type": "long"},
+                "Ship Date": {"type": "date", "format": "M/d/yyyy"},
+                "Units Sold": {"type": "integer"},
+                "Unit Price": {"type": "float"},
+                "Unit Costt": {"type": "float"},
+                "Total Revenue": {"type": "float"},
+                "Total Cost": {"type": "float"},
+                "Total Profit": {"type": "float"}
         }
 }
 }
