@@ -1,0 +1,12 @@
+{
+"properties": {
+    "order_date": {
+      "type": "date",
+      "format": "M/d/yyyy"
+    },
+    "ship_date": {
+        "type": "date",
+        "format": "M/d/yyyy"
+      }
+  }
+}  
