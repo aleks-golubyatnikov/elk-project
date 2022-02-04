@@ -14,6 +14,8 @@ curl -XGET -H "Content-Type: application/json" 192.168.0.40:9200
 curl -XPUT -H "Content-Type: application/json" 192.168.0.40:9200/blog/post/1?pretty --data-binary @data.json
 curl -XPUT -H "Content-Type: application/json" 192.168.0.40:9200/data-csv --data-binary @mappings.json
 curl -XDELETE 'http://192.168.0.40:9200/data-csv'
+#items count
+curl -XGET 'http://192.168.0.40:9200/_cat/count/data-csv?pretty=true&format=json' 
 
 5. Logstash
 /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf
