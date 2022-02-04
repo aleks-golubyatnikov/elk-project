@@ -1,0 +1,20 @@
+{
+"mappings": {
+        "properties": {
+                "region": {"type": "text"},
+                "country": {"type": "text"},
+                "item_type": {"type": "text"},
+                "sales_chanel": {"type": "text"},
+                "order_priority": {"type": "text"},
+                "order_date": {"type": "date", "format": "MM/dd/yyyy"},
+                "order_id": {"type": "long"},
+                "ship_date": {"type": "date", "format": "MM/dd/yyyy"},
+                "units_sold": {"type": "int"},
+                "unit_price": {"type": "float"},
+                "unit_cost": {"type": "float"},
+                "total_revenue": {"type": "float"},
+                "total_cost": {"type": "float"},
+                "total_profit": {"type": "float"}
+        }
+}
+}
