@@ -65,7 +65,7 @@ namespace log_parser
                                     log.message= new Data().ClearText(line.Substring(12))+" ";
 
                                     json_line = "{\"index\": {\"_index\":\"" + args[4] + "\"}}\r\n";
-                                    json_line += "{\"timestamp\": \"" + log.timestamp + "\",\"node\": \"" + log.node + "\", \"severity\": \"" + log.severity + "\", \"module\": \"\", \"message\": \"" + log.message + "\"}";
+                                    json_line += "{\"timestamp\": \"" + log.timestamp + "\",\"node\": \"" + log.node + "\", \"severity\": \"" + log.severity + "\", \"module\": \""+ log.module + "\", \"message\": \"" + log.message + "\"}";
 
                                     data.Add(json_line);
                                     
@@ -73,7 +73,7 @@ namespace log_parser
                                 else {
                                     log.message += line+" ";
                                     json_line = "{\"index\": {\"_index\":\"" + args[4] + "\"}}\r\n";
-                                    json_line += "{\"timestamp\": \"" + log.timestamp + "\",\"node\": \"" + log.node + "\", \"severity\": \"" + log.severity + "\", \"module\": \"\", \"message\": \"" + log.message + "\"}";
+                                    json_line += "{\"timestamp\": \"" + log.timestamp + "\",\"node\": \"" + log.node + "\", \"severity\": \"" + log.severity + "\", \"module\": \""+ log.module + "\", \"message\": \"" + log.message + "\"}";
 
                                     data[data.Count-1] = json_line;
                                 }

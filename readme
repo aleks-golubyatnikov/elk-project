@@ -19,3 +19,11 @@ curl -XGET 'http://192.168.0.40:9200/_cat/count/data-csv?pretty=true&format=json
 
 5. Logstash
 /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf
+
+6. Kibana
+#in case of bigdata in it
+#curl -XPUT -H 'Content-Type: application/json' 'http://192.168.0.40:9200/_cluster/settings' -d '{"transient" : {"cluster.routing.allocation.enable" : "none"}}'
+#curl -XPUT -H 'Content-Type: application/json' 'http://192.168.0.40:9200/_cluster/settings' -d '{"transient" : {"cluster.routing.allocation.enable" : "all"}}'
+
+curl -XDELETE 192.168.0.40:9200/logs-modes
+curl -XPOST -H 'Content-Type: application/json' '192.168.0.40:9200/_xpack/sql?format=txt' -d '{"query": "DESCRIBE \"logs-modes\" "}'
