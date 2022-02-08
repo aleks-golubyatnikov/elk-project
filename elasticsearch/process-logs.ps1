@@ -61,8 +61,8 @@ Function ProcessLogs () {
             
             $Parser=$_ParserPath+"\log-parser.exe";
             $_name=$_.Name.Substring(0,$_.Name.IndexOf('.'))+"-data";
-            $Params="$($([System.Net.Dns]::GetHostName())) ""$($_.FullName)"" ""$($_ProcessedPath)\\"" ""$($_name)"" $($_Index) $($_FileSize) $($_RowsCount)";
-            $cmd=$Parser+" "+$Params;
+            $Params="$($([System.Net.Dns]::GetHostName())) ""$($_.FullName)"" ""$($_ProcessedPath)\\"" ""$($_name)"" $($_Index) $($_FileSize) $($_RowsCount) $((Get-date).AddDays(-1) | Get-Date -UFormat "%Y-%m-%d")";
+            #$cmd=$Parser+" "+$Params;
             
             SaveTextLog -_File "$($_log)" -_Data "Started processing the file '$($_.FullName)' ";
             Start-Process -FilePath "$Parser" -ArgumentList $Params -Wait;

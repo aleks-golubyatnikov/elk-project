@@ -19,7 +19,7 @@ namespace log_parser
                 ifile.WriteTextLog("# " + arg);
             }
 
-            if (args.Length <7)
+            if (args.Length <8)
             {
                 ifile.WriteTextLog("Invalid args\r\n");
                 
@@ -58,7 +58,7 @@ namespace log_parser
                                 string pattern = @"^\d{2}:\d{2}:\d{2}";
                                 Match m = Regex.Match(line, pattern, RegexOptions.IgnoreCase);
                                 if (m.Success) {
-                                    log.timestamp = DateTime.Now.ToString("yyyy-MM-dd") + "T" + line.Substring(0, 12).Replace(",", ".");
+                                    log.timestamp = args[7] + "T" + line.Substring(0, 12).Replace(",", ".");
                                     log.node = args[0];
                                     log.severity = line.Split(' ')[1];
                                     log.module = line.Substring(line.IndexOf('['), (line.IndexOf(']')- line.IndexOf('[')+1));
@@ -90,6 +90,7 @@ namespace log_parser
                             4: logs-modes
                             5: 50
                             6: 1000
+                            7: "2022-02-07"
                         */
 
                         int i = 0;
