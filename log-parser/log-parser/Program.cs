@@ -62,7 +62,7 @@ namespace log_parser
                                     log.node = args[0];
                                     log.severity = line.Split(' ')[1];
                                     log.module = line.Substring(line.IndexOf('['), (line.IndexOf(']')- line.IndexOf('[')+1));
-                                    log.message= new Data().ClearText(line.Substring(12))+" ";
+                                    log.message= new Data().ClearText(line.Substring(line.IndexOf('-')+1))+" ";
 
                                     json_line = "{\"index\": {\"_index\":\"" + args[4] + "\"}}\r\n";
                                     json_line += "{\"timestamp\": \"" + log.timestamp + "\",\"node\": \"" + log.node + "\", \"severity\": \"" + log.severity + "\", \"module\": \""+ log.module + "\", \"message\": \"" + log.message + "\"}";
