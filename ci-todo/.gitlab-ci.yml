@@ -1,0 +1,17 @@
+stages:
+  - build
+
+.build_template: &build_template
+  script:
+    - echo "starting build..."   
+  tags:
+    - docker
+  
+build application:
+  <<: *build_template
+  stage: build 
+  script:
+    - echo "build job finished" 
+
+
+    
